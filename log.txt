@@ -1,0 +1,340 @@
+[210779770106]:  root INFO: checking/installing ztvlan module on Celestica TOR switches
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] running [find /root/sdk/ -name 'cls_shell']
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] output [ find /root/sdk/ -name 'cls_shell'
+[210779770106]:  lib.pxconn DEBUG: /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cls_shell
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] running [PATH=$PATH:/root/sdk/R3247-J0001-01_V18_CS8260_SDK]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] output [ PATH=$PATH:/root/sdk/R3247-J0001-01_V18_CS8260_SDK
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] running [cls_shell ztvlan --version]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] output [ cls_shell ztvlan --version
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 1
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 2
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] running [ls /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] output [ cls_shell ztvlan --version
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 1
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: running [cat celestica.sh | ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/                                                        dev/null root@10.115.45.133 "cat > /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh"]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] running [dos2unix /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica                                                        .sh]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] output [
+[210779770106]:  lib.pxconn DEBUG: ls /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py
+[210779770106]:  lib.pxconn DEBUG: dos2unix /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 3
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 4
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 5
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 6
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 7
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] running [chmod +x /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica                                                        .sh]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] output [
+[210779770106]:  lib.pxconn DEBUG: ls /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py
+[210779770106]:  lib.pxconn DEBUG: dos2unix /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 3
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 4
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 5
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 6
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] running [cd /root/sdk/R3247-J0001-01_V18_CS8260_SDK && /root/sdk/R3                                                        247-J0001-01_V18_CS8260_SDK/celestica.sh && cd -]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] output [
+[210779770106]:  lib.pxconn DEBUG: chmod +x /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh
+[210779770106]:  lib.pxconn DEBUG: cd /root/sdk/R3247-J0001-01_V18_CS8260_SDK && /root/sdk/R3247-J0001-01_V18_CS8260_S                                                        DK/celestica.sh && cd -
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 8
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 9
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 10
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 11
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 12
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 13
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 14
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 15
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 16
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 17
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 18
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 19
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 20
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 21
+[210779770106]:  lib.pxconn DEBUG: Failed to connect to Innovium shell
+[210779770106]:  lib.pxconn DEBUG: ONIE:~ # ls /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py
+[210779770106]:  lib.pxconn DEBUG: ls: /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py: No such file or directo                                                        ry
+[210779770106]:  lib.pxconn DEBUG: ONIE:~ # dos2unix /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh
+[210779770106]:  lib.pxconn DEBUG: ONIE:~ # chmod +x /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh
+[210779770106]:  lib.pxconn DEBUG: ONIE:~ # cd /root/sdk/R3247-J0001-01_V18_CS8260_SDK && /root/sdk/R3247-J0001-01_
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: V18_CS8260_SDK/celestica.sh && cd -
+[210779770106]:  lib.pxconn DEBUG: == ZT Innovium VLAN CTL v1.2.4 ==
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: Installing script
+[210779770106]:  lib.pxconn DEBUG: Updating permissions
+[210779770106]:  lib.pxconn DEBUG: Activating integration
+[210779770106]:  lib.pxconn DEBUG: Killing innovium.user
+[210779770106]:  lib.pxconn DEBUG: Killing discover
+[210779770106]:  lib.pxconn DEBUG: Configuring switch
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: change to singleVlan mode, waiting ...
+[210779770106]:  lib.pxconn DEBUG: dynamic config. mode is 1-1:copper_4x25:fec-def;2-2:copper_4x25:fec-def;3-3:copper_                                                        4x25:fec-def;4-4:copper_4x25:fec-def;5-5:copper_4x25:fec-def;6-6:copper_4x25:fec-def;7-7:copper_4x25:fec-def;8-8:coppe                                                        r_4x25:fec-def;9-9:copper_4x25:fec-def;10-10:copper_4x25:fec-def;11-11:copper_4x25:fec-def;12-12:copper_4x25:fec-def;1                                                        3-13:copper_4x25:fec-def;14-14:copper_4x25:fec-def;15-15:copper_4x25:fec-def;16-16:copper_4x25:fec-def;17-17:copper_4x                                                        25:fec-def;18-18:copper_4x25:fec-def;19-19:copper_4x25:fec-def;20-20:copper_4x25:fec-def;21-21:copper_4x25:fec-def;22-                                                        22:copper_4x25:fec-def;23-23:copper_4x25:fec-def;24-24:copper_4x25:fec-def;25-25:4x100:fec-def;26-26:4x100:fec-def;27-                                                        27:4x100:fec-def;28-28:4x100:fec-def;29-29:4x100:fec-def;30-30:4x100:fec-def;31-31:4x100:fec-def;32-32:4x100:fec-def
+[210779770106]:  lib.pxconn DEBUG: 0001:01:00.0 Ethernet controller: Device 1d98:1b58 (rev 10)
+[210779770106]:  lib.pxconn DEBUG:              LnkSta: Speed 8GT/s, Width x4, TrErr- Train- SlotClk- DLActive- BWMgmt                                                        - ABWMgmt-
+[210779770106]:  lib.pxconn DEBUG: ipd 458752 0 - Live 0xffff000000b93000 (O)
+[210779770106]:  lib.pxconn DEBUG: MAC address:20:00:00:00:00:fe
+[210779770106]:  lib.pxconn DEBUG: boardID:0x02
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG:              Innovium Standalone Command Shell.
+[210779770106]:  lib.pxconn DEBUG:      Type '?' or 'help' for help menu. Type 'quit' or 'exit' to exit shell.
+[210779770106]:  lib.pxconn DEBUG: Node 0 created and enabled.
+[210779770106]:  lib.pxconn DEBUG: === PCI: LED_REFRESH_PRECLIFF (0x13538)  ===
+[210779770106]:  lib.pxconn DEBUG: Writing 00013538: 0x0018eec2
+[210779770106]:  lib.pxconn DEBUG: === PCI: LED_REFRESH_CLIFF (0x13530)  ===
+[210779770106]:  lib.pxconn DEBUG: Writing 00013530: 0x00000020
+[210779770106]:  lib.pxconn DEBUG: Enter daemon mode.
+[210779770106]:  lib.pxconn DEBUG: misc config.
+[210779770106]:  lib.pxconn DEBUG: === PCI: LED_REFRESH_PRECLIFF (0x13538)  ===
+[210779770106]:  lib.pxconn DEBUG: Writing 00013538: 0x0018eec2
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: === PCI: LED_REFRESH_CLIFF (0x13530)  ===
+[210779770106]:  lib.pxconn DEBUG: Writing 00013530: 0x00000020
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: dynamic create preemphasis file done
+[210779770106]:  lib.pxconn DEBUG: The device configuration has 128 ports, not included CPU port
+[210779770106]:  lib.pxconn DEBUG: MC_DEST instance creation
+[210779770106]:  lib.pxconn DEBUG: STP instance creation
+[210779770106]:  lib.pxconn DEBUG: STP instance mbr add and set to FWD
+[210779770106]:  lib.pxconn DEBUG: MDG instance creation
+[210779770106]:  lib.pxconn DEBUG: L2VNI instance creation
+[210779770106]:  lib.pxconn DEBUG: L2VNI instance mbr add
+[210779770106]:  lib.pxconn DEBUG: add MC_DEST to MDG
+[210779770106]:  lib.pxconn DEBUG: L2VNI mbr stp state set to FWD
+[210779770106]:  lib.pxconn DEBUG: Default PVID & UNATG Egress set
+[210779770106]:  lib.pxconn DEBUG: Integrator mode config done
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: misc config end.
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: Updating default VLAN ID to 1
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: MC_DEST instance creation
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294656
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294657
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294658
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294659
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294660
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294661
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294662
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294663
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294664
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294665
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294666
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294667
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294668
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294669
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294670
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294671
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294672
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294673
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294674
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294675
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294676
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294677
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294678
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294679
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294680
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294681
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294682
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294683
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294684
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294685
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294686
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294687
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294688
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294689
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294690
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294691
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294692
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294693
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294694
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294695
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294696
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294697
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294698
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294699
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294700
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294701
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294702
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294703
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294704
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294705
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294706
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294707
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294708
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294709
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294710
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294711
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294712
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294713
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294714
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294715
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294716
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294717
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294718
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294719
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294720
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294721
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294722
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294723
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294724
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294725
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294726
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294727
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294728
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294729
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294730
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294731
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294732
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294733
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294734
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294735
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294736
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294737
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294738
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294739
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294740
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294741
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294742
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294743
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294744
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294745
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294746
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294747
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294748
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294749
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294750
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294751
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294752
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294753
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294754
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294755
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294756
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294757
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294758
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294759
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294760
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294761
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294762
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294763
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294764
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294765
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294766
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294767
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294768
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294769
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294770
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294771
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294772
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294773
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294774
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294775
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294776
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294777
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294778
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294779
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294780
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294781
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294782
+[210779770106]:  lib.pxconn DEBUG: Existing MC_DEST 740294783
+[210779770106]:  lib.pxconn DEBUG: STP instance creation
+[210779770106]:  lib.pxconn DEBUG: Existing STP 1008730113
+[210779770106]:  lib.pxconn DEBUG: STP instance mbr add and set to FWD
+[210779770106]:  lib.pxconn DEBUG: MDG instance creation
+[210779770106]:  lib.pxconn DEBUG: Existing MDG 742391936
+[210779770106]:  lib.pxconn DEBUG: L2VNI instance creation
+[210779770106]:  lib.pxconn DEBUG: L2VNI instance mbr add
+[210779770106]:  lib.pxconn DEBUG: add MC_DEST to MDG
+[210779770106]:  lib.pxconn DEBUG: L2VNI mbr stp state set to FWD
+[210779770106]:  lib.pxconn DEBUG: Default PVID & UNTAG Egress set
+[210779770106]:  lib.pxconn DEBUG: L2VNI Add Member Complete
+[210779770106]:  lib.pxconn DEBUG: L2VNI instance creation
+[210779770106]:  lib.pxconn DEBUG: L2VNI instance mbr remove
+[210779770106]:  lib.pxconn DEBUG: Default PVID & UNTAG Egress set
+[210779770106]:  lib.pxconn DEBUG: L2VNI Remove Member Complete
+[210779770106]:  lib.pxconn DEBUG: Cleared L2 MAC Entries
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: Starting ONIE Discovery
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG:
+[210779770106]:  lib.pxconn DEBUG: Installation complete. Module help can be obtained by executing: ./cls_shell ztvlan                                                         -h
+[210779770106]:  lib.pxconn DEBUG: /root
+[210779770106]:  lib.pxconn DEBUG: ONIE:~ # ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] running [ls /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.133] output [
+[210779770106]:  lib.pxconn DEBUG: chmod +x /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh
+[210779770106]:  lib.pxconn DEBUG: cd /root/sdk/R3247-J0001-01_V18_CS8260_SDK && /root/sdk/R3247-J0001-01_V18_CS8260_S                                                        DK/celestica.sh && cd -
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 8
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 9
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 10
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 11
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 12
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 13
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 14
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 15
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 16
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 17
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 18
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 19
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 20
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 21
+[210779770106]:  lib.pxconn DEBUG: Failed to connect to Innovium shell
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  root INFO: ztvlan not detected, attempt [1/3], retrying in 10 seconds
+[210779770106]:  root INFO: ztvlan not detected, attempt [2/3], retrying in 10 seconds
+[210779770106]:  root INFO: ztvlan not detected, attempt [3/3], retrying in 10 seconds
+[210779770106]:  root INFO: successfully installed on switch [C8260F2B07253219M1234]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] running [find /root/sdk/ -name 'cls_shell']
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] output [ find /root/sdk/ -name 'cls_shell'
+[210779770106]:  lib.pxconn DEBUG: /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cls_shell
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] running [PATH=$PATH:/root/sdk/R3247-J0001-01_V18_CS8260_SDK]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] output [ PATH=$PATH:/root/sdk/R3247-J0001-01_V18_CS8260_SDK
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] running [cls_shell ztvlan --version]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] output [ cls_shell ztvlan --version
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 1
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 2
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] running [ls /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] output [ cls_shell ztvlan --version
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 1
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: running [cat celestica.sh | ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/                                                        dev/null root@10.115.45.127 "cat > /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh"]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] running [dos2unix /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica                                                        .sh]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] output [
+[210779770106]:  lib.pxconn DEBUG: ls /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py
+[210779770106]:  lib.pxconn DEBUG: dos2unix /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 3
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 4
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 5
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 6
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 7
+[210779770106]:  lib.pxconn DEBUG: ]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] running [chmod +x /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica                                                        .sh]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] attempt [0]
+[210779770106]:  lib.pxconn DEBUG: [10.115.45.127] output [
+[210779770106]:  lib.pxconn DEBUG: ls /root/sdk/R3247-J0001-01_V18_CS8260_SDK/cmds/ztvlan.py
+[210779770106]:  lib.pxconn DEBUG: dos2unix /root/sdk/R3247-J0001-01_V18_CS8260_SDK/celestica.sh
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 3
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 4
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 5
+[210779770106]:  lib.pxconn DEBUG: Attempting to connect to Innovium shell .. 6
+[210779770106]:  lib.pxconn DEBUG: ]
