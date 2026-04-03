@@ -1,0 +1,439 @@
+/logs/442_newzclogs/210790380002/ztmfg_backplane_pcie_switch_msft_update_firmware_2026-04-02_024722.log
+2026-04-02 02:47:22.878 DEBUG wrappers.py       391  Using ztcopernicus v1.4.54
+2026-04-02 02:47:22.878 DEBUG wrappers.py       393  Using ztmfg_backplane_pcie_switch_msft v1.0.14
+2026-04-02 02:47:22.883 DEBUG wrappers.py       393  Using ztplugin_mfgtestlib v1.10.1
+2026-04-02 02:47:22.901 DEBUG wrappers.py       393  Using ztplugin_mfghelper v0.15.8
+2026-04-02 02:47:22.905 DEBUG wrappers.py       141  User is calling function ztmfg_backplane_pcie_switch_msft.update_firmware with args: ((), {'fw_info_file': 'S:\\autorun_log\\pcie_switch_fw_info_file_2026-04-02_024720.json'})
+2026-04-02 02:47:22.906 INFO  core_utils.py     45   
+**************************
+* Switchtec Driver Check *
+**************************
+2026-04-02 02:47:22.907 INFO  plugin.py         131  Checking if Switchtec driver is installed:
+2026-04-02 02:47:22.915 DEBUG execute_tool.py   79   Running subprocess: driverquery | Find "Switchtec"
+2026-04-02 02:47:22.916 DEBUG execute_tool.py   79   <SUBPROCESS STDOUT STARTS>
+2026-04-02 02:47:23.220 DEBUG execute_tool.py   79   Switchtec    Switchtec Management S Kernel        9/9/2020 3:52:08 PM   
+2026-04-02 02:47:23.233 DEBUG execute_tool.py   79   <SUBPROCESS STDOUT ENDS>
+2026-04-02 02:47:23.235 INFO  plugin.py         137  Switchtec driver already loaded.
+2026-04-02 02:47:23.236 INFO  core_utils.py     45   
+*********************
+* Pre-Update Set-Up *
+*********************
+2026-04-02 02:47:23.237 DEBUG plugin.py         149  Loaded fw_info_file: {
+    "input": {
+        "fw_package_archive": {
+            "pm": "seahawk/pcie/B900/pm.fwimg",
+            "bl_rcvry": "seahawk/pcie/B900/bl_rcvry.fwimg",
+            "bl": "seahawk/pcie/B900/bl.fwimg",
+            "cf": "seahawk/pcie/B900/cf.fwimg",
+            "fw": "seahawk/pcie/B900/fw.fwimg",
+            "keym": "seahawk/pcie/B900/keym.fwimg",
+            "key1": "seahawk/pcie/B900/462493_462501_kmsk1.kmsk",
+            "key2": "seahawk/pcie/B900/462494_462502_kmsk2.kmsk",
+            "key2a": "seahawk/pcie/B900/462494_462502_kmsk2.sig",
+            "key3": "seahawk/pcie/B900/462495_462503_kmsk3.kmsk",
+            "key3a": "seahawk/pcie/B900/462495_462503_kmsk3.sig",
+            "key4": "seahawk/pcie/B900/462496_462504_kmsk4.kmsk",
+            "key4a": "seahawk/pcie/B900/462496_462504_kmsk4.sig",
+            "otp_settings": "seahawk/pcie/B900/otp_settings.bin",
+            "key1_pem": "seahawk/pcie/B900/462493_462501_kmsk1.pem",
+            "key2_pem": "seahawk/pcie/B900/462494_462502_kmsk2.pem",
+            "key3_pem": "seahawk/pcie/B900/462495_462503_kmsk3.pem",
+            "key4_pem": "seahawk/pcie/B900/462496_462504_kmsk4.pem"
+        },
+        "skip_update": false,
+        "verbose": false,
+        "fw_flash_cmd": "",
+        "golden_data": {
+            "PCIe Switch": [
+                {
+                    "Device Name": "switchtec0",
+                    "Generation": "GEN4",
+                    "Variant": "PSX",
+                    "Device ID": "0x4168",
+                    "Chip Serial": "0x63ea6bb2",
+                    "Firmware Version": "0.00 B900",
+                    "Map Version": "3.70 B04F",
+                    "Key Version": "0.00 B900",
+                    "BL2 Version": "0.00 B900",
+                    "IMG Version": "0.00 B900",
+                    "CFG Version": "0.00 B900",
+                    "Secure State": "INITIALIZED_SECURED",
+                    "KMSK Entry Number (Valid)": "4",
+                    "KMSK Entry 1": "c51e08549c3714059ea8b10d640b23d81f66fb9fbce2aee5acadf2669d6e86fbe14c27aa4ba21cf50971f7e4af4e8ae66b17698ccb58d2d78ead362bc18c97f6",
+                    "KMSK Entry 2": "f8c091931de3ac82576937b4ac76e1742a8e95957a0325b2fe793c1e450b2e200b63ffff3cb3315fe0f795045746e9b392fc7368db002cac7dcda07169c7c82a",
+                    "KMSK Entry 3": "c6837dcb7e5155b54c1def4fda756411b8f482b72ada4c26016341f80dbce563ac855da02aa8b5332ce6cc86fa98e246774ef234b286e6010757810967e1ed8c",
+                    "KMSK Entry 4": "32d3039dc641bdb1383fe472b95027e1bd27abb0cd10b40e2f202f67efd84a1f760880f6f682403133fc0133c584f5dee76b1db2eb7656d6f757c28dbb2a7a7a"
+                }
+            ]
+        },
+        "inventory_data": {
+            "PCIe Switch": [
+                {
+                    "Device Name": "switchtec0",
+                    "Generation": "GEN4",
+                    "Variant": "PSX",
+                    "Device ID": "0x4168",
+                    "Chip Serial": "0x6883b41f",
+                    "Firmware Version": "0.00 B900",
+                    "Map Version": "3.70 B04F",
+                    "Key Version": "0.00 B900",
+                    "BL2 Version": "0.00 B900",
+                    "IMG Version": "0.00 B900",
+                    "CFG Version": "0.00 B900",
+                    "Secure State": "UNINITIALIZED_UNSECURED",
+                    "KMSK Entry Number (Valid)": "0"
+                }
+            ]
+        }
+    }
+}
+2026-04-02 02:47:23.237 DEBUG plugin.py         155  Got fw_package_archive: {
+    "pm": "seahawk/pcie/B900/pm.fwimg",
+    "bl_rcvry": "seahawk/pcie/B900/bl_rcvry.fwimg",
+    "bl": "seahawk/pcie/B900/bl.fwimg",
+    "cf": "seahawk/pcie/B900/cf.fwimg",
+    "fw": "seahawk/pcie/B900/fw.fwimg",
+    "keym": "seahawk/pcie/B900/keym.fwimg",
+    "key1": "seahawk/pcie/B900/462493_462501_kmsk1.kmsk",
+    "key2": "seahawk/pcie/B900/462494_462502_kmsk2.kmsk",
+    "key2a": "seahawk/pcie/B900/462494_462502_kmsk2.sig",
+    "key3": "seahawk/pcie/B900/462495_462503_kmsk3.kmsk",
+    "key3a": "seahawk/pcie/B900/462495_462503_kmsk3.sig",
+    "key4": "seahawk/pcie/B900/462496_462504_kmsk4.kmsk",
+    "key4a": "seahawk/pcie/B900/462496_462504_kmsk4.sig",
+    "otp_settings": "seahawk/pcie/B900/otp_settings.bin",
+    "key1_pem": "seahawk/pcie/B900/462493_462501_kmsk1.pem",
+    "key2_pem": "seahawk/pcie/B900/462494_462502_kmsk2.pem",
+    "key3_pem": "seahawk/pcie/B900/462495_462503_kmsk3.pem",
+    "key4_pem": "seahawk/pcie/B900/462496_462504_kmsk4.pem"
+}
+2026-04-02 02:47:23.238 INFO  core_utils.py     45   
+***********************
+* Firmware Comparison *
+***********************
+2026-04-02 02:47:23.238 INFO  plugin.py         293  [Secure State] does not match the required value.
+2026-04-02 02:47:23.238 INFO  plugin.py         293  [KMSK Entry Number (Valid)] does not match the required value.
+2026-04-02 02:47:23.239 INFO  plugin.py         293  [KMSK Entry 1] does not match the required value.
+2026-04-02 02:47:23.239 INFO  plugin.py         293  [KMSK Entry 2] does not match the required value.
+2026-04-02 02:47:23.239 INFO  plugin.py         293  [KMSK Entry 3] does not match the required value.
+2026-04-02 02:47:23.239 INFO  plugin.py         293  [KMSK Entry 4] does not match the required value.
+2026-04-02 02:47:23.240 INFO  plugin.py         297  Missing KMSK Keys: ['Secure State', 'KMSK Entry Number (Valid)', 'KMSK Entry 1', 'KMSK Entry 2', 'KMSK Entry 3', 'KMSK Entry 4']
+2026-04-02 02:47:23.240 INFO  plugin.py         372  Force Flag:       [False]
+2026-04-02 02:47:23.240 INFO  plugin.py         373  Skip Update Flag: [False]
+2026-04-02 02:47:23.241 INFO  plugin.py         374  Firmware Match:   [True]
+2026-04-02 02:47:23.241 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.get_blade_number with args: ((), {})
+2026-04-02 02:47:23.242 DEBUG wrappers.py       215  ztplugin_mfghelper.get_blade_number returned: "11"
+2026-04-02 02:47:23.243 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.get_rm_address with args: ((), {})
+2026-04-02 02:47:23.244 DEBUG wrappers.py       215  ztplugin_mfghelper.get_rm_address returned: "10.78.198.113"
+2026-04-02 02:47:23.244 DEBUG wrappers.py       141  ztmfg_backplane_pcie_switch_msft.update_firmware is calling function ztmfg_backplane_pcie_switch_msft.enable_secure_boot with args: (('11', '10.78.198.113'), {})
+2026-04-02 02:47:23.245 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfgtestlib.get_model with args: ((), {})
+2026-04-02 02:47:23.245 DEBUG wrappers.py       215  ztplugin_mfgtestlib.get_model returned: "GEN8.4 XIO V2 STORAGE"
+2026-04-02 02:47:23.246 INFO  core_utils.py     45   
+****************************
+* Pushing Key Files to BMC *
+****************************
+2026-04-02 02:47:23.246 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462493_462501_kmsk1.kmsk', '11', '10.78.198.113'), {})
+2026-04-02 02:47:23.247 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:47:23.247 DEBUG plugin.py         78   Setting up redfish helper...
+2026-04-02 02:47:44.126 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:47:44.127 INFO  core_utils.py     45   File [462493_462501_kmsk1.kmsk] already exists on the RM
+2026-04-02 02:47:44.127 INFO  core_utils.py     45   Pushing file [462493_462501_kmsk1.kmsk] from RM to blade [11]
+2026-04-02 02:47:44.128 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462493_462501_kmsk1.kmsk"}', '10.78.198.113'), {})
+2026-04-02 02:47:56.627 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:47:56.627 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462493_462501_kmsk1.kmsk] from RM to blade [11]'s BMC"
+2026-04-02 02:47:56.628 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462494_462502_kmsk2.kmsk', '11', '10.78.198.113'), {})
+2026-04-02 02:47:56.628 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:48:16.514 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:48:16.515 INFO  core_utils.py     45   File [462494_462502_kmsk2.kmsk] already exists on the RM
+2026-04-02 02:48:16.515 INFO  core_utils.py     45   Pushing file [462494_462502_kmsk2.kmsk] from RM to blade [11]
+2026-04-02 02:48:16.516 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462494_462502_kmsk2.kmsk"}', '10.78.198.113'), {})
+2026-04-02 02:48:28.528 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:48:28.529 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462494_462502_kmsk2.kmsk] from RM to blade [11]'s BMC"
+2026-04-02 02:48:28.529 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462494_462502_kmsk2.sig', '11', '10.78.198.113'), {})
+2026-04-02 02:48:28.530 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:48:48.895 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:48:48.895 INFO  core_utils.py     45   File [462494_462502_kmsk2.sig] already exists on the RM
+2026-04-02 02:48:48.896 INFO  core_utils.py     45   Pushing file [462494_462502_kmsk2.sig] from RM to blade [11]
+2026-04-02 02:48:48.896 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462494_462502_kmsk2.sig"}', '10.78.198.113'), {})
+2026-04-02 02:49:01.380 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:49:01.380 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462494_462502_kmsk2.sig] from RM to blade [11]'s BMC"
+2026-04-02 02:49:01.381 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462495_462503_kmsk3.kmsk', '11', '10.78.198.113'), {})
+2026-04-02 02:49:01.381 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:49:21.300 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:49:21.300 INFO  core_utils.py     45   File [462495_462503_kmsk3.kmsk] already exists on the RM
+2026-04-02 02:49:21.301 INFO  core_utils.py     45   Pushing file [462495_462503_kmsk3.kmsk] from RM to blade [11]
+2026-04-02 02:49:21.301 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462495_462503_kmsk3.kmsk"}', '10.78.198.113'), {})
+2026-04-02 02:49:34.399 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:49:34.399 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462495_462503_kmsk3.kmsk] from RM to blade [11]'s BMC"
+2026-04-02 02:49:34.400 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462495_462503_kmsk3.sig', '11', '10.78.198.113'), {})
+2026-04-02 02:49:34.400 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:49:54.813 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:49:54.813 INFO  core_utils.py     45   File [462495_462503_kmsk3.sig] already exists on the RM
+2026-04-02 02:49:54.814 INFO  core_utils.py     45   Pushing file [462495_462503_kmsk3.sig] from RM to blade [11]
+2026-04-02 02:49:54.814 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462495_462503_kmsk3.sig"}', '10.78.198.113'), {})
+2026-04-02 02:50:06.439 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:50:06.440 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462495_462503_kmsk3.sig] from RM to blade [11]'s BMC"
+2026-04-02 02:50:06.440 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462496_462504_kmsk4.kmsk', '11', '10.78.198.113'), {})
+2026-04-02 02:50:06.442 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:50:26.251 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:50:26.251 INFO  core_utils.py     45   File [462496_462504_kmsk4.kmsk] already exists on the RM
+2026-04-02 02:50:26.252 INFO  core_utils.py     45   Pushing file [462496_462504_kmsk4.kmsk] from RM to blade [11]
+2026-04-02 02:50:26.252 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462496_462504_kmsk4.kmsk"}', '10.78.198.113'), {})
+2026-04-02 02:50:39.021 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:50:39.022 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462496_462504_kmsk4.kmsk] from RM to blade [11]'s BMC"
+2026-04-02 02:50:39.022 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462496_462504_kmsk4.sig', '11', '10.78.198.113'), {})
+2026-04-02 02:50:39.023 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:50:58.839 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:50:58.840 INFO  core_utils.py     45   File [462496_462504_kmsk4.sig] already exists on the RM
+2026-04-02 02:50:58.840 INFO  core_utils.py     45   Pushing file [462496_462504_kmsk4.sig] from RM to blade [11]
+2026-04-02 02:50:58.841 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462496_462504_kmsk4.sig"}', '10.78.198.113'), {})
+2026-04-02 02:51:11.156 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:51:11.157 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462496_462504_kmsk4.sig] from RM to blade [11]'s BMC"
+2026-04-02 02:51:11.157 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('otp_settings.bin', '11', '10.78.198.113'), {})
+2026-04-02 02:51:11.158 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:51:31.106 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:51:31.106 INFO  core_utils.py     45   File [otp_settings.bin] already exists on the RM
+2026-04-02 02:51:31.106 INFO  core_utils.py     45   Pushing file [otp_settings.bin] from RM to blade [11]
+2026-04-02 02:51:31.107 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "otp_settings.bin"}', '10.78.198.113'), {})
+2026-04-02 02:51:43.779 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:51:43.779 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [otp_settings.bin] from RM to blade [11]'s BMC"
+2026-04-02 02:51:43.780 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462493_462501_kmsk1.pem', '11', '10.78.198.113'), {})
+2026-04-02 02:51:43.781 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:52:03.591 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:52:03.592 INFO  core_utils.py     45   File [462493_462501_kmsk1.pem] already exists on the RM
+2026-04-02 02:52:03.592 INFO  core_utils.py     45   Pushing file [462493_462501_kmsk1.pem] from RM to blade [11]
+2026-04-02 02:52:03.593 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462493_462501_kmsk1.pem"}', '10.78.198.113'), {})
+2026-04-02 02:52:15.292 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:52:15.292 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462493_462501_kmsk1.pem] from RM to blade [11]'s BMC"
+2026-04-02 02:52:15.293 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462494_462502_kmsk2.pem', '11', '10.78.198.113'), {})
+2026-04-02 02:52:15.293 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:52:36.994 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:52:36.995 INFO  core_utils.py     45   File [462494_462502_kmsk2.pem] already exists on the RM
+2026-04-02 02:52:36.995 INFO  core_utils.py     45   Pushing file [462494_462502_kmsk2.pem] from RM to blade [11]
+2026-04-02 02:52:36.996 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462494_462502_kmsk2.pem"}', '10.78.198.113'), {})
+2026-04-02 02:52:50.512 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:52:50.513 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462494_462502_kmsk2.pem] from RM to blade [11]'s BMC"
+2026-04-02 02:52:50.513 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462495_462503_kmsk3.pem', '11', '10.78.198.113'), {})
+2026-04-02 02:52:50.515 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:53:12.843 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:53:12.843 INFO  core_utils.py     45   File [462495_462503_kmsk3.pem] already exists on the RM
+2026-04-02 02:53:12.844 INFO  core_utils.py     45   Pushing file [462495_462503_kmsk3.pem] from RM to blade [11]
+2026-04-02 02:53:12.844 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462495_462503_kmsk3.pem"}', '10.78.198.113'), {})
+2026-04-02 02:53:24.955 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:53:24.955 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462495_462503_kmsk3.pem] from RM to blade [11]'s BMC"
+2026-04-02 02:53:24.956 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.rm_sftp_put_to_bmc with args: (('462496_462504_kmsk4.pem', '11', '10.78.198.113'), {})
+2026-04-02 02:53:24.956 INFO  core_utils.py     45   Getting TFTP file list from the RM
+2026-04-02 02:53:47.184 DEBUG plugin.py         1048 Found files: ['462493_462501_kmsk1.kmsk', '462493_462501_kmsk1.pem', '462494_462502_kmsk2.kmsk', '462494_462502_kmsk2.pem', '462494_462502_kmsk2.sig', '462495_462503_kmsk3.kmsk', '462495_462503_kmsk3.pem', '462495_462503_kmsk3.sig', '462496_462504_kmsk4.kmsk', '462496_462504_kmsk4.pem', '462496_462504_kmsk4.sig', 'C2184_SCM_CPLD_v02.01.00-signed.jed', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionA_CSDE07_V010F.FA43.hex', 'FPS-213-D0000293-101_MIS-S-1020ADE01_RegionB_CS070A_V010F.FA43.hex', 'HAYS_LSCM_CPLD_Main_Ver02.03.00-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.03-signed.jed', 'HAYS_MB_CPLD_Main_Ver02.06-signed.jed', 'S2180.BC.0405.00.bin', 'S2180.BC.0409.00.bin', 'S2180.BS.1C32.GN1.bin', 'S2185.5.BS.1C14.GN.1.bin', 'S2185.5.BS.1C17.GN.1.25.bin', 'S2185.5.BS.1C20.GN.2.25.bin', 'S2185.5.BS.1C20.GN.2.bin', 'S2185.BC.0304.00.bin', 'S2185.BC.0315.00.bin', 'S2185.BC.0316.00.bin', 'S2185.BC.0318.00.bin', 'S2185_SCM_CPLD_Main_Ver02.04.00-signed.jed', 'm2010fwimage-1.1.35.14.tgz', 'otp_settings.bin']
+2026-04-02 02:53:47.184 INFO  core_utils.py     45   File [462496_462504_kmsk4.pem] already exists on the RM
+2026-04-02 02:53:47.185 INFO  core_utils.py     45   Pushing file [462496_462504_kmsk4.pem] from RM to blade [11]
+2026-04-02 02:53:47.185 DEBUG wrappers.py       141  ztplugin_mfghelper._rm_sftp_put_to_bmc is calling function ztplugin_mfghelper.rfpost with args: (('redfish/v1/Managers/RackManager/ManagedSystem/11/Sftp/Actions/Sftp.Put', '{"File": "462496_462504_kmsk4.pem"}', '10.78.198.113'), {})
+2026-04-02 02:53:59.419 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:53:59.420 DEBUG wrappers.py       215  ztplugin_mfghelper.rm_sftp_put_to_bmc returned: "Successfully SFTP put file [462496_462504_kmsk4.pem] from RM to blade [11]'s BMC"
+2026-04-02 02:53:59.420 INFO  core_utils.py     45   All key files successfully pushed onto the BMC!
+2026-04-02 02:53:59.420 INFO  core_utils.py     45   
+******************************
+* Secure Boot Enable Process *
+******************************
+2026-04-02 02:58:58.757 INFO  plugin.py         545  switchtec mfg st
+2026-04-02 02:59:31.774 INFO  plugin.py         552  set system cmd -i 11 -c raw 0x34 0x93 2 4
+    Ipmi Response: 
+    Completion Code: Success
+
+2026-04-02 02:59:31.776 DEBUG wrappers.py       141  Parent plugin is calling function ztplugin_mfghelper.run_ipmi_command_outband with args: (('raw 0x34 0x93 2 0', '11', '10.78.198.113'), {})
+2026-04-02 02:59:31.777 DEBUG wrappers.py       141  ztplugin_mfghelper.run_ipmi_command_outband is calling function ztplugin_mfghelper.rfpost with args: (('11/redfish/v1/Managers/System/Actions/Manager.ipmicmd', {'Payload': 'raw 0x34 0x93 2 0'}, '10.78.198.113'), {})
+2026-04-02 02:59:33.713 DEBUG wrappers.py       215  ztplugin_mfghelper.rfpost returned: {
+    "error": {
+        "@Message.ExtendedInfo": [
+            {
+                "@odata.type": "/11/redfish/v1/$metadata#Message.v1_0_0.Message",
+                "Oem": {
+                    "Microsoft": {
+                        "@odata.type": "#Ocs.v1_0_0.Message",
+                        "CompletionCode": "Success"
+                    }
+                }
+            }
+        ]
+    }
+}
+2026-04-02 02:59:33.719 DEBUG wrappers.py       215  ztmfg_backplane_pcie_switch_msft.update_firmware returned: {
+    "results": "Failed to run outband IPMI command via Redfish",
+    "exit_message": "Failed to run outband IPMI command via Redfish",
+    "exit_code": 69999,
+    "logs": [
+        "S:\\autorun_log\\ztmfg_backplane_pcie_switch_msft_update_firmware_2026-04-02_024722.log"
+    ],
+    "next_action_hint": "stop",
+    "next_action_code": 1,
+    "repair_hint": null,
+    "timestamp": "20260402_025933",
+    "duration_in_sec": 730.813122
+}
